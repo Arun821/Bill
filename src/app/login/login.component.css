@@ -1,0 +1,31 @@
+mat-icon{
+    position: relative;
+    display: flex;
+    left: 35%;
+    font-size: 80px;
+}
+mat-card h2{
+    position: relative;
+    display: flex;
+    top: 50px;
+    left: 30%;
+    font-weight: bolder;
+}
+mat-card{
+    height: 400px;
+}
+form{
+    position: relative;
+    display: flex;
+    top: 40px;
+}
+mat-card a{
+    position: relative;
+    display: flex;
+    top: 60px;
+    left: 30%;
+}
+button{
+    outline-style: none;
+    border: none;
+}

@@ -1,0 +1,72 @@
+<div class="head">
+    <h2>Add New Invoices</h2>
+</div>
+<mat-card>
+    <div fxLayout="row" fxLayoutGap="15px">
+        <mat-label>Coustomer Name</mat-label>
+        <input matInput placeholder="Coustomer Name">
+        <mat-label>Coustomer Details</mat-label>
+        <textarea matInput placeholder="Address"></textarea>
+        <mat-label>Invoice No</mat-label>
+        <input matInput>
+        <mat-label>Invoice Date</mat-label>
+        <input matInput type="date">
+    </div>
+</mat-card>
+<div class="inv">
+    <h2>Invoice</h2>
+</div>
+
+<section>
+    <table>
+        <thead>
+            <td>No</td>
+            <td>Code</td>
+            <td>Item Name</td>
+            <td>Unit</td>
+            <td>Price</td>
+            <td>Tax</td>
+            <td>Total</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>
+                  <select  [(ngModel)]="proCode" (ngModelChange)="onCodeSelected($event)">
+                    <option *ngFor="let code of products" [ngValue]="code" >{{code.code}}</option>
+                  </select>
+                </td>
+                <td>{{modifideName}}</td>
+                <td>
+                    <select matNativeControl >
+                        <option value="" selected>Select</option>
+                        <option value="volvo">1</option>
+                        <option value="saab" >2</option>
+                        <option value="mercedes">3</option>
+                        <option value="audi">4</option>
+                      </select>
+                </td>
+                <td>{{modifiedPrice}}</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+</section>
+<div class="btn"> 
+  <button mat-raised-button color="primary">Add</button>
+</div>
+<section class="total">
+    <div>
+        <p>Grand Total</p>
+        <input type="text">
+    </div>
+    
+</section>
+<section fxLayout="row" fxLayoutGap="15px" class="btns">
+    <button class="save">Save</button>
+    <button class="bt">Save as Draft</button>
+    <button class="bt">Cancel</button>
+</section>
