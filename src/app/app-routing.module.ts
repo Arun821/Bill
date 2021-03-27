@@ -10,7 +10,7 @@ const routes: Routes = [
   
   {path:'root', component:RootNavComponent,
   children:[
-    {path:'admin', component:AdminComponent},
+    {path:'', component:AdminComponent, pathMatch:"full"},
     {path:'invoice', component:InvoiceComponent}
   ]
   }
